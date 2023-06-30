@@ -1,0 +1,254 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: 'Sora', sans-serif;
+    background-image: url("../img/Banner_with_abstract_low_poly_design_2508.jpg");
+    background-size: 103%;
+    width: 100%;
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login {
+    height: 100vh;
+    width: 500px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+    box-shadow: 0px 1px 37px 3px rgba(255, 118, 118, 1);
+    -webkit-box-shadow: 0px 1px 37px 3px rgba(255, 118, 118, 1);
+    -moz-box-shadow: 0px 1px 37px 3px rgba(255, 118, 118, 1);
+}
+
+.login-headding {
+    margin-top: 20px;
+    font-weight: 600;
+    font-size: 50px;
+    line-height: 60px;
+    text-align: center;
+    /* or 114% */
+    letter-spacing: -0.02em;
+    color: #1a1919;
+    text-shadow: 11px 37px 6px rgba(83, 37, 37, 0.23);
+}
+
+.img-avata {
+    text-align: center;
+    width: 200px;
+    display: flex;
+    margin: 0 auto;
+}
+
+.login-label {
+    font-weight: 600;
+    font-size: 15px;
+    text-align: center;
+    /* or 114% */
+    letter-spacing: -0.02em;
+    color: #000000;
+    cursor: pointer;
+}
+
+.login-label:nth-of-type(2) {
+    margin-top: 25px;
+    display: inline-block;
+}
+
+.login-form {
+    margin: -10px 43px -10px;
+}
+
+input {
+    width: 370px;
+    display: block;
+    padding: 15px 0;
+    border: none;
+    outline: 0;
+    flex-grow: 1;
+}
+
+.login-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 2px solid #8b6a6a;
+    background-color: white;
+    border-radius: 10px 0px 0px 0px;
+    padding-left: 10px;
+}
+
+.login-group:hover {
+    border-color: red;
+}
+
+::placeholder {
+    color: rgb(133, 126, 130);
+    font-size: 15px;
+}
+
+.link {
+    width: 150px;
+    text-decoration: none;
+    display: block;
+    font-weight: 400;
+    font-size: 16px;
+    color: #000000;
+    margin: 10px 40px 29px 268px;
+}
+
+.link:hover {
+    color: rgb(13, 0, 255);
+}
+
+
+/* --------CSS button animations ----------*/
+
+.button1 {
+    margin: 10px auto 30px;
+    text-align: center;
+    line-height: 30px;
+    display: block;
+    --border-radius: 15px;
+    --border-width: 4px;
+    appearance: none;
+    position: relative;
+    padding: 1em 5em;
+    border: 0;
+    background-color: #212121;
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
+    z-index: 2;
+    border-radius: 17px;
+    cursor: pointer;
+}
+
+.button1::after {
+    --m-i: linear-gradient(#000, #000);
+    --m-o: content-box, padding-box;
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    padding: var(--border-width);
+    border-radius: var(--border-radius);
+    background-image: conic-gradient( #488cfb, #29dbbc, #ddf505, #ff9f0e, #e440bb, #655adc, #488cfb);
+    -webkit-mask-image: var(--m-i), var(--m-i);
+    mask-image: var(--m-i), var(--m-i);
+    -webkit-mask-origin: var(--m-o);
+    mask-origin: var(--m-o);
+    -webkit-mask-clip: var(--m-o);
+    mask-composite: exclude;
+    -webkit-mask-composite: destination-out;
+    filter: hue-rotate(0);
+    animation: rotate-hue linear 500ms infinite;
+    animation-play-state: paused;
+}
+
+.button1:hover::after {
+    animation-play-state: running;
+}
+
+@keyframes rotate-hue {
+    to {
+        filter: hue-rotate(1turn);
+    }
+}
+
+.button1,
+.button1::after {
+    box-sizing: border-box;
+}
+
+.button1:active {
+    --border-width: 5px;
+}
+
+
+/* --------CSS button animations ----------*/
+
+.login-social {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.login-social-desc {
+    display: block;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+    /* or 175% */
+    color: #6e808f;
+    margin-bottom: 10px;
+}
+
+.socal-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background-color: #006eff;
+    fill: white;
+}
+
+.socal-link:hover {
+    opacity: 0.6;
+}
+
+.socal-link svg {
+    fill: white;
+}
+
+.socal-link:last-child {
+    background-color: #ff7b00;
+}
+
+.socal-link:nth-of-type(2) {
+    background-color: #00d5ff;
+}
+
+.login-social-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+}
+
+.sign-up {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.signup-link {
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 38px;
+    /* or 175% */
+    color: #030303;
+}
+
+.signup-link:hover {
+    color: #1100ff;
+}
+
+#eye {
+    padding: 0 10px;
+    cursor: pointer;
+}
+
+
+/* -------- SIGN UP ----------*/
